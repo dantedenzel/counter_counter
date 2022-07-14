@@ -17,5 +17,9 @@ def reset():
     session.clear()
     return redirect('/')
 
+@app.errorhandler(404)
+def check(error):
+    return f"Page not found"
+
 if __name__=="__main__":
     app.run(debug=True)
