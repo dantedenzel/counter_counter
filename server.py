@@ -8,9 +8,7 @@ app.secret_key="keep it a secret"
 def index():
     if "count" not in session:
         session["count"] = 0
-    # elif:
-    #     session["count"] += -1
-    # else:
+    else:
         session['count'] += 1
     return render_template("index.html")
 
